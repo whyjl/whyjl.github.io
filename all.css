@@ -1,0 +1,218 @@
+body {
+    padding: 0 20%;
+    background: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Patua One', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+}
+.header {
+    padding-top: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+.header span{
+    color: #fff;
+    display: block;
+}
+.header span.prompt{
+    color: #fff46d;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.318);
+}
+
+.container {
+    padding: 0 40px;
+}
+.flex-box {
+    width: 100%;
+    height: 600px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img {
+    text-align: center;
+}
+.img img {
+    width: 50%;
+}
+  
+.footer {
+    height: 45px;
+    position: relative;
+}
+  
+.footer input {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -150px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(208,208,208,1) 6%, rgba(182,182,182,1) 30%, rgba(194,194,194,1) 67%);
+    font-weight: 700;
+}
+  
+.word {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 60px;
+}
+.word::before {
+    content: "";
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -80px;
+    left: 90px;
+    z-index: 1;
+}
+.word::after {
+    content: "";
+    width: 260px;
+    height: 90px;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    font-size: 60px;
+    top: -124px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+    padding-top: 30px;
+    border: 4px solid #fff;
+    border-bottom: none;
+}
+.word.first::after {
+    content: "01";
+    background: #f37576;
+    box-shadow: 3px 0px #a55155;
+}
+.word.first::before {
+    background: #f37576;
+}
+.word.second::after {
+    content: "02";
+    background: #ffc051;
+    box-shadow: 3px 0px #a37936;
+}
+.word.second::before {
+    background: #ffc051;
+}
+.word.third::after {
+    content: "03";
+    background: #00aebd;
+    box-shadow: 3px 0px #009fa3;
+}
+.word.third::before {
+    background: #00aebd;
+}
+
+.word input {
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  font-size: 150px;
+  background: rgba(255,255,255,0.318);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+.word input:focus {
+    outline: 0px solid;
+}
+
+.first input {
+    border: 4px solid #f37576;
+    box-shadow: 3px 3px #a55155;
+}
+.first input:focus {
+    background: rgba(243, 117, 118, 0.318);
+}
+
+
+.second input {
+    border: 4px solid #ffc051;
+    box-shadow: 3px 3px #a37936;
+}
+.second input:focus {
+    background: rgba(255, 192, 81, 0.318);
+}
+
+.third input {
+    border: 4px solid #00aebd;
+    box-shadow: 3px 3px #009fa3;
+}
+.third input:focus {
+    background: rgba(0, 174, 189, 0.318);
+}
+
+@media (max-width:812px) {
+    body {
+        width: 100%;
+        padding: 6rem 0;
+        background-size: unset;
+    }
+    .header{
+        padding-top: 0;
+        font-size: 2rem;
+    }
+    .header span.prompt{
+        font-size: 1rem;
+    }
+    .container {
+        padding: 0;
+    }
+    .flex-box {
+        width: 93%;
+        height: 15rem;
+    }
+    .img img {
+        width: 90%;
+    }
+    .word{
+        width: 10rem;
+        height: 10rem;
+        padding-left: 1rem;
+    }
+    .word input{
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+    .word::after{
+        width: 3.5rem;
+        height: 2.2rem;
+        top: -2.4rem;
+        left: 1.8rem;
+        padding-top: 0;
+        font-size: 1.2rem;
+    }
+    .word::before{
+        width: 2rem;
+        height: 2rem;
+        top: -1rem;
+        left: 2.9rem;
+    }
+}
+@media screen and  (orientation:landscape) {
+    body{
+        padding: 0;
+    }
+    .flex-box {
+        padding-left: 2rem;
+    }
+    .img img {
+        width: 55%;
+    }
+}
