@@ -314,6 +314,22 @@ body {
         left: 1.9rem;
     }
 }
+@media (max-width:768px) {
+    .first::after {
+        left: 3.9rem;
+    }
+    .first::before {
+        left: 5rem;
+    }
+}
+@media (max-width:411px) {
+    .first::after {
+        left: 2.9rem;
+    }
+    .first::before {
+        left: 4rem;
+    }
+}
 @media (max-width:320px) {
     .word {
         padding-left: 0.3rem;
@@ -338,14 +354,6 @@ body {
     }
     .third::before {
         left: 2.1rem;
-    }
-}
-@media (max-width:768px) {
-    .first::after {
-        left: 3.9rem;
-    }
-    .first::before {
-        left: 5rem;
     }
 }
 /* @media screen and  (orientation:landscape) {
