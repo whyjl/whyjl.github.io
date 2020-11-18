@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Patua+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
     <title>-- Enter Password --</title>
 </head>
 <body>
@@ -34,23 +35,41 @@
         </div>
         <div class="footer">
             <!-- <input type="button" value="確認送出" onclick="showResult()"> -->
-            <div class="drag" style="display: none;">
+            <!-- <div class="drag" style="display: none;">
                 <div class="bg"></div>
                 <div class="text" onselectstart="return false;">請拖動滑塊解鎖</div>
                 <div class="btn">🦄</div>
+            </div> -->
+            <div id="demo" style="display: none;">
+                <div id="slider">
+                    <div id="slider_bg"></div>
+                    <span id="label">🦄</span>
+                    <span id="labelTip">拖動解鎖~</span>
+                </div>
             </div>
         </div>
     </div>
-  <script src="slideLock.js" type="text/javascript"></script>
+  <!-- <script src="slideLock.js" type="text/javascript"></script> -->
+  <script src="slideLockJQ.js" type="text/javascript"></script>
   <script type="text/javascript">
+    // function showResult(){
+    //     var w1 = $('.first input').value;
+    //     var w2 = $('.second input').value;
+    //     var w3 = $('.third input').value;
+    //     if(w1 == '巧' && w2 == '巧' && w3 == '巧'){
+    //             $('.drag').style.display = "block";
+    //         }else{
+    //             $('.drag').style.display = "none";
+    //         }
+    // }
     function showResult(){
-        var w1 = $('.first input').value;
-        var w2 = $('.second input').value;
-        var w3 = $('.third input').value;
+        var w1 = $('.first input').val();
+        var w2 = $('.second input').val();
+        var w3 = $('.third input').val();
         if(w1 == '巧' && w2 == '巧' && w3 == '巧'){
-                $('.drag').style.display = "block";
+                $('#demo').show();
             }else{
-                $('.drag').style.display = "none";
+                $('#demo').hide();
             }
     }
   </script>
