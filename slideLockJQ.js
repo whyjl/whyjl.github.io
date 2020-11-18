@@ -141,6 +141,8 @@ $(function() {
         $('.flex-box').hide();
         $('.img').show();
         $('.footer').hide();
+        $('.header span.title').hide();
+        $('.header span.prompt').text('禮物底加拉~');
     });
     slider.init();
 })
