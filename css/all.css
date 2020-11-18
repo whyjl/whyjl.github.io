@@ -1,19 +1,19 @@
 body {
-    padding: 0 20%;
-    background: url('bg.png');
+    max-width: 1280px;
+    background: url('../img/bg.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center center;
     font-family: 'Patua One', cursive;
     font-family: 'Noto Sans TC', sans-serif;
-    margin: 0;
 }
+
 .header {
-    padding-top: 10px;
     font-size: 50px;
     text-align: center;
 }
 .header span{
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #fff;
     display: block;
 }
@@ -28,7 +28,7 @@ body {
 }
 .flex-box {
     width: 100%;
-    height: 600px;
+    height: 450px;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -157,11 +157,49 @@ body {
     background: rgba(0, 174, 189, 0.318);
 }
 
+/*滑動鎖的樣式*/
+.drag{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #e8e8e8;
+    position: relative;
+    margin:0 auto;
+}
+.bg{
+    width:40px;
+    height: 100%;
+    position: absolute;
+    background-color: #75CDF9;
+}
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+}
+.btn{
+    width:40px;
+    height: 38px;
+    position: absolute;
+    border:1px solid #ccc;
+    cursor: move;
+    font-family: "宋體";
+    text-align: center;
+    background-color: #fff;
+    user-select: none;
+    color:#666;
+}
+
 @media (max-width:812px) {
     body {
+        max-width:812px;
         width: 100%;
-        padding: 6rem 0;
         background-size: unset;
+    }
+    .body {
+        padding-top: 6rem;
     }
     .header{
         padding-top: 0;
@@ -174,7 +212,6 @@ body {
         padding: 0;
     }
     .flex-box {
-        width: 93%;
         height: 15rem;
     }
     .img img {
@@ -184,6 +221,8 @@ body {
         width: 10rem;
         height: 10rem;
         padding-left: 1rem;
+        top: 2rem;
+        display: flex;
     }
     .word input{
         width: 5rem;
@@ -204,8 +243,60 @@ body {
         top: -1rem;
         left: 2.9rem;
     }
+    .first {
+        justify-content: center;
+    }
+    .first::after {
+        left: 2.9rem;
+    }
+    .first::before {
+        left: 3.8rem;
+    }
+    .third {
+        padding-left: 0;
+    }
+    .third::after {
+        left: 0.8rem;
+    }
+    .third::before {
+        left: 1.9rem;
+    }
 }
-@media screen and  (orientation:landscape) {
+@media (max-width:320px) {
+    .word {
+        padding-left: 0.3rem;
+    }
+    .first::after {
+        left: 1.5rem;
+    }
+    .first::before {
+        left: 2.5rem;
+    }
+    .second {
+        padding-left: 0.5rem;
+    }
+    .second::after {
+        left: 1.4rem;
+    }
+    .second::before {
+        left: 2.4rem;
+    }
+    .third::after {
+        left: 1.1rem;
+    }
+    .third::before {
+        left: 2.1rem;
+    }
+}
+@media (max-width:768px) {
+    .first::after {
+        left: 3.9rem;
+    }
+    .first::before {
+        left: 5rem;
+    }
+}
+/* @media screen and  (orientation:landscape) {
     body{
         padding: 0;
     }
@@ -215,4 +306,4 @@ body {
     .img img {
         width: 55%;
     }
-}
+} */
