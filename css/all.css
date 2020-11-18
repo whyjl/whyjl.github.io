@@ -1,12 +1,14 @@
 body {
-    max-width: 1280px;
     background: url('../img/bg.png');
     background-size: cover;
     background-position: center center;
     font-family: 'Patua One', cursive;
     font-family: 'Noto Sans TC', sans-serif;
 }
-
+.body{
+    max-width: 1280px;
+    margin: 0 auto;
+}
 .header {
     font-size: 50px;
     text-align: center;
@@ -272,9 +274,10 @@ body {
     .word{
         width: 10rem;
         height: 10rem;
-        padding-left: 1rem;
         top: 2rem;
         display: flex;
+        justify-content: center;
+        position: relative;
     }
     .word input{
         width: 5rem;
@@ -295,65 +298,40 @@ body {
         top: -1rem;
         left: 2.9rem;
     }
-    .first {
-        justify-content: center;
-    }
-    .first::after {
-        left: 2.9rem;
-    }
-    .first::before {
-        left: 3.8rem;
-    }
     .third {
         padding-left: 0;
     }
-    .third::after {
-        left: 0.8rem;
-    }
-    .third::before {
-        left: 1.9rem;
-    }
 }
 @media (max-width:768px) {
-    .first::after {
-        left: 3.9rem;
+    .word::after {
+        left: 2.8rem;
     }
-    .first::before {
-        left: 5rem;
+    .word::before {
+        left: 3.9rem;
     }
 }
 @media (max-width:411px) {
-    .first::after {
-        left: 2.9rem;
+    .word::after {
+        left: 2.3rem;
     }
-    .first::before {
-        left: 4rem;
+    .word::before {
+        left: 3.3rem;
+    }
+}
+@media (max-width:360px) {
+    .word::after {
+        left: 1.8rem;
+    }
+    .word::before {
+        left: 2.8rem;
     }
 }
 @media (max-width:320px) {
-    .word {
-        padding-left: 0.3rem;
-    }
-    .first::after {
+    .word::after {
         left: 1.5rem;
     }
-    .first::before {
+    .word::before {
         left: 2.5rem;
-    }
-    .second {
-        padding-left: 0.5rem;
-    }
-    .second::after {
-        left: 1.4rem;
-    }
-    .second::before {
-        left: 2.4rem;
-    }
-    .third::after {
-        left: 1.1rem;
-    }
-    .third::before {
-        left: 2.1rem;
     }
 }
 /* @media screen and  (orientation:landscape) {
