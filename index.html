@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/all.css">
+    <link href="css/zldialog.default.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Patua+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.zldialog.js" type="text/javascript"></script>
+    <script src="js/jquery.zldialog.l18n.js" type="text/javascript"></script>
     <title>-- Enter Password --</title>
 </head>
 <body>
@@ -49,8 +52,8 @@
             </div>
         </div>
     </div>
-  <!-- <script src="slideLock.js" type="text/javascript"></script> -->
-  <script src="slideLockJQ.js" type="text/javascript"></script>
+  <!-- <script src="js/slideLock.js" type="text/javascript"></script> -->
+  <script src="js/slideLockJQ.js" type="text/javascript"></script>
   <script type="text/javascript">
     $(function() {
     });
@@ -69,9 +72,17 @@
         var w2 = $('.second input').val();
         var w3 = $('.third input').val();
         if(w1 == '超' && w2 == '愛' && w3 == '你'){
+            // alert('🦄🦄🦄','開啟通道');
+            $.dialog.alert({
+                title: 'Success🦄✨',
+                content:"開啟通道"
+            });
             $('#demo').show();
         }else if(w1 == '巧' && w2 == '艾' && w3 == '泥'){
-            alert('改個字取個諧音，快答對惹😍😍😍');
+            $.dialog.alert({
+                title: '📣答案很接近了~',
+                content:"您輸入的文字為：巧艾泥，諧音就是答案囉😎"
+            });
         }else{
             $('#demo').hide();
         }

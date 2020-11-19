@@ -137,12 +137,12 @@ $(function() {
     var slider = new SliderUnlock("#slider", {
         successLabelTip: "验证成功"
     }, function() {
-        // alert("验证成功");
+        // alert('🦄🦄🦄','開啟通道');
         $('.flex-box').hide();
         $('.img').show();
         $('.footer').hide();
         $('.header span.title').hide();
-        $('.header span.prompt').text('禮物底加拉~');
+        $('.header span.prompt').text('✨盒子裡面還有東西唷✧*｡٩(ˊᗜˋ*)و✧*｡✨');
     });
     slider.init();
 })
