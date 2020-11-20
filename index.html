@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="img" style="display: none;">
-                <img src="img/2883.jpg">
+                <img src="img/2916.jpg">
             </div>
         </div>
         <div class="footer">
@@ -74,18 +74,29 @@
         if(w1 == '超' && w2 == '愛' && w3 == '你'){
             // alert('🦄🦄🦄','開啟通道');
             $.dialog.alert({
-                title: 'Success🦄✨',
-                content:"開啟通道"
+                title: 'Success 🦄✨',
+                content: "開啟通道",
             });
             $('#demo').show();
         }else if(w1 == '巧' && w2 == '艾' && w3 == '泥'){
             $.dialog.alert({
-                title: '📣答案很接近了~',
-                content:"您輸入的文字為：巧艾泥，諧音就是答案囉😎"
+                title: '📣 答案接近了~',
+                content: "諧音就是答案囉😎",
             });
+            $('.word input').val('');
         }else{
+            if(w1 != '' && w2 != '' && w3 != ''){
+                $.dialog.alert({
+                    title: '❌ERROR',
+                    content: "答案錯誤請重新輸入 ❗❗",
+                });
+                $('.word input').val('');
+            }
             $('#demo').hide();
         }
+    }
+    function pageReload() {
+        location.reload();
     }
   </script>
 </body>
