@@ -12,7 +12,8 @@ body {
     justify-content: center;
 }
 .bubbly-button {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    /* font-family: 'Helvetica', 'Arial', sans-serif; */
+    font-family: 'Noto Sans TC', sans-serif;
     display: inline-block;
     font-size: 1em;
     padding: 1em 2em;
