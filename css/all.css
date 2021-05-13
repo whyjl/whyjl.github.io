@@ -6,6 +6,11 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 /*首頁*/
+.btnList {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .bubbly-button {
     font-family: 'Helvetica', 'Arial', sans-serif;
     display: inline-block;
